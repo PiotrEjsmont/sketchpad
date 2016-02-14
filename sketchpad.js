@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 var rows = 16;
 var columns = 16;
 var $row = $("<div>", {
@@ -6,33 +8,33 @@ var $row = $("<div>", {
 var $square = $("<div>", {
     class: 'square'
 });
-var grid = 16;
-var width = $('#container').width;
-var height = $('#container').height;
-$(document).ready(function () {
-		   	create();
-        $('.square').mouseenter(function() {
-    		$(this).css({"background-color": "blue"});
-    	});
-    	$("button").click(function() {
-	    	$('#container').empty();
-			changeNumbers();
-			create();
-    });
+var dimension = 25;
+
+create();
+$("button").click(function() {
+	$('.container').remove();
+	changeNumbers();
+	create();
 });
+function changeNumbers() {
+	var grid;
+	grid = prompt("How many squares per side to make the new grid?");
+	rows = grid;
+	columns = grid;
+	dimension = 400/grid;
+}
 function create () {
+	$('.wrapper').append("<div class='container'></div>");
 	for (var i = 0; i < columns; i++) {
         $row.append($square.clone());
     }
-    for (i = 0; i < rows; i++) {
-        $("#container").append($row.clone());
+    for (var j = 0; j < rows; j++) {
+        $(".container").append($row.clone());
     }
+    $('.square').mouseenter(function() {
+    $(this).css({"background-color": "blue"});
+    	});
+    $('.square').height(dimension).width(dimension);
+    $('.row').height(dimension);
 }
-function changeNumbers() {
-	grid = prompt("How many squares per side to make the new grid?");
-	$('.square').css({"width": width/grid, "height": height/grid});
-	$('.row').css({"height": height/grid});
-	rows = grid;
-	columns = grid;
-}
-
+});
