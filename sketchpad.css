@@ -4,19 +4,16 @@ button {
 	margin: -40px 600px;
 	position: absolute;
 }
-#container {
+.container {
     width: 400px;
     height: 400px;
     margin: 100px auto;
     position: relative;
 }
 .row {
-    width: auto;
-    height: 25px;
+    width: 400px;
 }
 .square {
-    height: 25px;
-    width: 25px;
     outline: 1px solid;
     display: inline-block;
 }
