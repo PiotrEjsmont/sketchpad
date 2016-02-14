@@ -5,13 +5,13 @@ button {
 	position: absolute;
 }
 .container {
-    width: 400px;
-    height: 400px;
+    width: 640px;
+    height: 640px;
     margin: 100px auto;
     position: relative;
 }
 .row {
-    width: 400px;
+    width: 640px;
 }
 .square {
     outline: 1px solid;
