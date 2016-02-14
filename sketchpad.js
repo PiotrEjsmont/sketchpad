@@ -2,12 +2,6 @@ $(document).ready(function () {
 
 var rows = 16;
 var columns = 16;
-var $row = $("<div>", {
-    class: 'row'
-});
-var $square = $("<div>", {
-    class: 'square'
-});
 var dimension = 25;
 
 create();
@@ -25,12 +19,13 @@ function changeNumbers() {
 }
 function create () {
 	$('.wrapper').append("<div class='container'></div>");
+	 for (var j = 0; j < rows; j++) {
+        $(".container").append("<div class='row'></div>");
+    }
 	for (var i = 0; i < columns; i++) {
-        $row.append($square.clone());
+        $(".row").append("<div class='square'></div>");
     }
-    for (var j = 0; j < rows; j++) {
-        $(".container").append($row.clone());
-    }
+   
     $('.square').mouseenter(function() {
     $(this).css({"background-color": "blue"});
     	});
