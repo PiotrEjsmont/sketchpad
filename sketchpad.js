@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 var rows = 16;
 var columns = 16;
-var dimension = 25;
+var dimension = 40;
 
 create();
 $("button").click(function() {
@@ -15,7 +15,7 @@ function changeNumbers() {
 	grid = prompt("How many squares per side to make the new grid?");
 	rows = grid;
 	columns = grid;
-	dimension = 400/grid;
+	dimension = 640/grid;
 }
 function create () {
 	$('.wrapper').append("<div class='container'></div>");
