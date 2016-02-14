@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script type='text/javascript' src='sketchpad.js'></script>
-		<link type="text/css" rel="stylesheet" href="sketchpad.css" />
-		<title>sketchpad</title>
-	</head>
-	<body>
-		<div>
-			<button>Clear</button>
-		</div>
-		<div id="container"></div>
-	</body>
-</html>
+button {
+	width: 60px;
+	height: 30px;
+	margin: -40px 600px;
+	position: absolute;
+}
+.container {
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+    position: relative;
+}
+.row {
+    width: 400px;
+}
+.square {
+    outline: 1px solid;
+    display: inline-block;
+}
